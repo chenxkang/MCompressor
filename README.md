@@ -19,7 +19,7 @@
 ### Step 2. Add the dependency
 
 	dependencies {
-    	 implementation 'com.github.chenxkang:MCompressor:v1.0.0'
+    	 implementation 'com.github.chenxkang:MCompressor:v1.0.1'
     }
 
 
