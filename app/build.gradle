@@ -31,6 +31,7 @@ dependencies {
     androidTestImplementation lib.testEspresso
 
     implementation project(':mcompressor')
+    implementation "com.android.support:recyclerview-v7:${rootProject.ext.supportLibrary}"
     implementation 'com.zhihu.android:matisse:0.4.3'
     implementation 'com.squareup.picasso:picasso:2.5.2'
 }
