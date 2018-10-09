@@ -22,10 +22,10 @@ public class CompressUtil {
             return targetImage;
         }
 
-        return compressFile(targetImage, newWidth, newHeight, format, quality, resultPath);
+        return compressFile(targetImage, newWidth, newHeight, format, quality, resultPath, fileSize, unit);
     }
 
-    public static File compressFile(File targetImage, int newWidth, int newHeight, CompressFormat format, int quality, String resultPath) {
+    public static File compressFile(File targetImage, int newWidth, int newHeight, CompressFormat format, int quality, String resultPath, int fileSize, CompressUnit unit) {
         FileOutputStream stream = null;
         Bitmap bitmap = null;
         File file = new File(resultPath).getParentFile();

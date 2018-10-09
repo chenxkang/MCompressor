@@ -1,6 +1,6 @@
 package com.chenxkang.mcompressor;
 
-import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
 import android.os.Environment;
 
 import java.io.File;
@@ -14,21 +14,25 @@ public class MCompressor {
 
     private int maxWidth = 960;
     private int maxHeight = 540;
-    private Bitmap.CompressFormat compressFormat = Bitmap.CompressFormat.JPEG;
-    private int quality = 100;
+    private CompressFormat compressFormat;
+    private int quality;
     private String fromPath, toPath;
-    private int fileSize = 1024;
-    private CompressUnit unit = CompressUnit.KB;
+    private int fileSize;
+    private CompressUnit unit;
 
     public MCompressor() {
-        toPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath();
+        this.compressFormat = CompressFormat.JPEG;
+        this.quality = 100;
+        this.fileSize = 1024;
+        this.unit = CompressUnit.KB;
+        this.toPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath();
     }
 
     public static MCompressor from() {
         return new MCompressor();
     }
 
-    public MCompressor compressFormat(Bitmap.CompressFormat format) {
+    public MCompressor compressFormat(CompressFormat format) {
         this.compressFormat = format;
         return this;
     }

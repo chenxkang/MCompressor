@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chenxkang.mcompressor.CompressUnit;
 import com.chenxkang.mcompressor.MCompressor;
 import com.squareup.picasso.Picasso;
 import com.zhihu.matisse.Matisse;
@@ -81,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.main_after_compress_btn:
                 File file = MCompressor.from()
+                        .greaterThan(200, CompressUnit.KB)
+                        .quality(60)
                         .fromFilePath(path)
                         .compress();
 

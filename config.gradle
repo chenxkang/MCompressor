@@ -1,0 +1,20 @@
+ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.1.0",
+            minSdkVersion    : 14,
+            targetSdkVersion : 26,
+            versionCode      : 4,
+            versionName      : "1.0.4"
+    ]
+
+    supportLibrary = "26.1.0"
+
+    supportDependencies = [
+            supportAppcompat: "com.android.support:appcompat-v7:${supportLibrary}",
+            supportDesign   : "com.android.support:design:${supportLibrary}",
+            testJunit       : "junit:junit:4.12",
+            testRunner      : "com.android.support.test:runner:1.0.2",
+            testEspresso    : "com.android.support.test.espresso:espresso-core:3.0.2"
+    ]
+}
